@@ -83,19 +83,19 @@ async function loadAINews() {
     
     const hardcodedNews = [
         {
-            title: "GLM-5 de Zhipu AI alcanza nuevo récord",
-            description: "El nuevo modelo chino de 744B parámetros supera a Gemini 3 Pro con tasa de alucinación más baja registrada.",
+            title: "Anthropic dona $20M para regular IA antes de elecciones 2026",
+            description: "El laboratorio de IA aporta fondos para impulsar regulaciones y seguridad en el ámbito político estadounidense.",
             date: "13 Feb 2026"
         },
         {
-            title: "OpenAI retira GPT-4o por vínculos emocionales",
-            description: "Más de 20,000 firmas piden salvar el modelo considerado 'demasiado humano'.",
-            date: "12 Feb 2026"
+            title: "Microsoft busca independencia de OpenAI con modelos propios",
+            description: "Mustafa Suleyman lidera esfuerzos hacia 'verdadera autosuficiencia' en IA, construyendo modelos fundacionales propios.",
+            date: "13 Feb 2026"
         },
         {
-            title: "Chile lanza Latam-GPT open-source",
-            description: "Primer LLM regional latinoamericano para combatir sesgo cultural en modelos globales.",
-            date: "11 Feb 2026"
+            title: "IA médica de U. Michigan diagnostica en segundos vía MRI",
+            description: "Sistema de IA interpreta escáneres cerebrales instantáneamente, identifica condiciones neurológicas y prioriza casos urgentes.",
+            date: "12 Feb 2026"
         }
     ];
     
