@@ -73,6 +73,24 @@ async function loadGitHubRepos() {
     }
 }
 
+// Load OpenClaw status
+function loadOpenClawStatus() {
+    const premiumEl = document.getElementById('premium-status');
+    const chatEl = document.getElementById('chat-status');
+    const updateEl = document.getElementById('last-update');
+    
+    // Hardcoded status - updated by script
+    const openclawStatus = {
+        premium: "60% left",
+        chat: "100% left",
+        lastUpdate: "13 Feb 2026, 22:23"
+    };
+    
+    premiumEl.textContent = openclawStatus.premium;
+    chatEl.textContent = openclawStatus.chat;
+    updateEl.textContent = openclawStatus.lastUpdate;
+}
+
 // Fetch AI news from backend API (you'll need to create this endpoint)
 async function loadAINews() {
     const newsGrid = document.querySelector('.news-grid');
@@ -111,6 +129,7 @@ async function loadAINews() {
 // Load all data on page load
 document.addEventListener('DOMContentLoaded', () => {
     loadWeather();
+    loadOpenClawStatus();
     loadGitHubRepos();
     loadAINews();
     
