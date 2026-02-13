@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaristo Saá - Dashboard Personal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Evaristo Saá</h1>
+                <div class="logo">
+                    <span class="logo-text">mAI</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Weather Card -->
+        <section class="card weather-card">
+            <h2>🌤️ Tiempo en Dos Hermanas</h2>
+            <div id="weather-content" class="loading">
+                Cargando clima...
+            </div>
+        </section>
+
+        <!-- AI News Card -->
+        <section class="card news-card">
+            <h2>🤖 Últimas Noticias IA</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <h3>GLM-5 de Zhipu AI alcanza nuevo récord</h3>
+                    <p>El nuevo modelo chino de 744B parámetros supera a Gemini 3 Pro con tasa de alucinación más baja registrada.</p>
+                    <span class="news-date">13 Feb 2026</span>
+                </article>
+                <article class="news-item">
+                    <h3>OpenAI retira GPT-4o por vínculos emocionales</h3>
+                    <p>Más de 20,000 firmas piden salvar el modelo considerado "demasiado humano".</p>
+                    <span class="news-date">12 Feb 2026</span>
+                </article>
+                <article class="news-item">
+                    <h3>Chile lanza Latam-GPT open-source</h3>
+                    <p>Primer LLM regional latinoamericano para combatir sesgo cultural en modelos globales.</p>
+                    <span class="news-date">11 Feb 2026</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- GitHub Repos Card -->
+        <section class="card repos-card">
+            <h2>💾 Repositorios Destacados</h2>
+            <div class="repos-grid">
+                <div class="repo-item">
+                    <h3>iturri-landing</h3>
+                    <p>Landing page corporativa de Iturri con diseño moderno y responsive.</p>
+                    <div class="repo-meta">
+                        <span class="repo-lang">HTML/CSS</span>
+                        <span class="repo-stars">⭐ 0</span>
+                    </div>
+                </div>
+                <div class="repo-item">
+                    <h3>evaristo-dashboard</h3>
+                    <p>Dashboard personal con clima, noticias IA y repositorios GitHub.</p>
+                    <div class="repo-meta">
+                        <span class="repo-lang">JavaScript</span>
+                        <span class="repo-stars">⭐ 0</span>
+                    </div>
+                </div>
+                <div class="repo-item">
+                    <h3>aiturri-platform</h3>
+                    <p>Plataforma multiagentes con LangGraph y LangChain para casos de uso IA.</p>
+                    <div class="repo-meta">
+                        <span class="repo-lang">Python</span>
+                        <span class="repo-stars">⭐ 0</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Powered by <strong>mAI</strong> 💚</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
