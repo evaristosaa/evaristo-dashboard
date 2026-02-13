@@ -218,6 +218,21 @@ main {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 12px;
+    min-height: 40px;
+}
+
+.repo-link {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.repo-link:hover {
+    transform: translateX(4px);
 }
 
 .repo-meta {

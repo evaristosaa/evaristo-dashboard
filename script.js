@@ -3,7 +3,6 @@ async function loadWeather() {
     const weatherContent = document.getElementById('weather-content');
     
     try {
-        // Fetch weather for Dos Hermanas, Sevilla
         const response = await fetch('https://wttr.in/Dos_Hermanas,Sevilla?format=j1');
         const data = await response.json();
         
@@ -49,10 +48,75 @@ async function loadWeather() {
     }
 }
 
-// Load weather on page load
+// Fetch GitHub repos
+async function loadGitHubRepos() {
+    const reposGrid = document.querySelector('.repos-grid');
+    
+    try {
+        const response = await fetch('https://api.github.com/users/evaristosaa/repos?sort=updated&per_page=3');
+        const repos = await response.json();
+        
+        reposGrid.innerHTML = repos.map(repo => `
+            <div class="repo-item">
+                <h3>${repo.name}</h3>
+                <p>${repo.description || 'Sin descripción'}</p>
+                <div class="repo-meta">
+                    <span class="repo-lang">${repo.language || 'N/A'}</span>
+                    <span class="repo-stars">⭐ ${repo.stargazers_count}</span>
+                </div>
+                <a href="${repo.html_url}" target="_blank" class="repo-link">Ver en GitHub →</a>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error fetching GitHub repos:', error);
+        reposGrid.innerHTML = '<p style="color: #666;">Error cargando repositorios</p>';
+    }
+}
+
+// Fetch AI news from backend API (you'll need to create this endpoint)
+async function loadAINews() {
+    const newsGrid = document.querySelector('.news-grid');
+    
+    // For now, using hardcoded news since Brave API requires server-side call
+    // To connect real API, create a backend endpoint that calls Brave Search API
+    // and serves the results to avoid exposing API keys in frontend
+    
+    const hardcodedNews = [
+        {
+            title: "GLM-5 de Zhipu AI alcanza nuevo récord",
+            description: "El nuevo modelo chino de 744B parámetros supera a Gemini 3 Pro con tasa de alucinación más baja registrada.",
+            date: "13 Feb 2026"
+        },
+        {
+            title: "OpenAI retira GPT-4o por vínculos emocionales",
+            description: "Más de 20,000 firmas piden salvar el modelo considerado 'demasiado humano'.",
+            date: "12 Feb 2026"
+        },
+        {
+            title: "Chile lanza Latam-GPT open-source",
+            description: "Primer LLM regional latinoamericano para combatir sesgo cultural en modelos globales.",
+            date: "11 Feb 2026"
+        }
+    ];
+    
+    newsGrid.innerHTML = hardcodedNews.map(news => `
+        <article class="news-item">
+            <h3>${news.title}</h3>
+            <p>${news.description}</p>
+            <span class="news-date">${news.date}</span>
+        </article>
+    `).join('');
+}
+
+// Load all data on page load
 document.addEventListener('DOMContentLoaded', () => {
     loadWeather();
+    loadGitHubRepos();
+    loadAINews();
     
     // Refresh weather every 10 minutes
     setInterval(loadWeather, 10 * 60 * 1000);
+    
+    // Refresh repos every hour
+    setInterval(loadGitHubRepos, 60 * 60 * 1000);
 });
