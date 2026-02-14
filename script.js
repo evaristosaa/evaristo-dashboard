@@ -81,9 +81,9 @@ function loadOpenClawStatus() {
     
     // Hardcoded status - updated by script
     const openclawStatus = {
-        premium: "60% left",
-        chat: "100% left",
-        lastUpdate: "13 Feb 2026, 22:23"
+        premium: "Premium: 59% left",
+        chat: "Chat: 100% left",
+        lastUpdate: "14 Feb 2026, 06:00"
     };
     
     premiumEl.textContent = openclawStatus.premium;
@@ -101,19 +101,19 @@ async function loadAINews() {
     
     const hardcodedNews = [
         {
-            title: "Anthropic dona $20M para regular IA antes de elecciones 2026",
-            description: "El laboratorio de IA aporta fondos para impulsar regulaciones y seguridad en el ámbito político estadounidense.",
+            title: "ONU aprueba panel científico de IA",
+            description: "Panel de 40 miembros estudiará impactos y riesgos de la IA",
             date: "13 Feb 2026"
         },
         {
-            title: "Microsoft busca independencia de OpenAI con modelos propios",
-            description: "Mustafa Suleyman lidera esfuerzos hacia 'verdadera autosuficiencia' en IA, construyendo modelos fundacionales propios.",
+            title: "IA amenaza más sectores del mercado",
+            description: "Wall Street en pánico: software, inmobiliarias y logística se hunden",
             date: "13 Feb 2026"
         },
         {
-            title: "IA médica de U. Michigan diagnostica en segundos vía MRI",
-            description: "Sistema de IA interpreta escáneres cerebrales instantáneamente, identifica condiciones neurológicas y prioriza casos urgentes.",
-            date: "12 Feb 2026"
+            title: "CEO advierte: disrupción IA mayor que COVID",
+            description: "Matt Shumer alerta sobre el gran impacto transformador de la IA",
+            date: "13 Feb 2026"
         }
     ];
     
