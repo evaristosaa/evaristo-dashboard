@@ -81,9 +81,9 @@ function loadOpenClawStatus() {
     
     // Hardcoded status - updated by script
     const openclawStatus = {
-        premium: "Premium: 59% left",
-        chat: "Chat: 100% left",
-        lastUpdate: "14 Feb 2026, 06:00"
+        premium: "51% left",
+        chat: "100% left",
+        lastUpdate: "15 Feb 2026, 06:22"
     };
     
     premiumEl.textContent = openclawStatus.premium;
@@ -101,19 +101,19 @@ async function loadAINews() {
     
     const hardcodedNews = [
         {
-            title: "ONU aprueba panel científico de IA",
-            description: "Panel de 40 miembros estudiará impactos y riesgos de la IA",
-            date: "13 Feb 2026"
+            title: "OpenAI y xAI pierden investigadores clave",
+            description: "Más renuncias en OpenAI y la mitad de cofundadores de xAI han dimitido en 24h",
+            date: "15 Feb 2026"
         },
         {
-            title: "IA amenaza más sectores del mercado",
-            description: "Wall Street en pánico: software, inmobiliarias y logística se hunden",
-            date: "13 Feb 2026"
+            title: "Gigantes tech invertirán 60B en IA este año",
+            description: "Los hyperscalers de IA planean gasto récord de 60 mil millones en 2026",
+            date: "14 Feb 2026"
         },
         {
-            title: "CEO advierte: disrupción IA mayor que COVID",
-            description: "Matt Shumer alerta sobre el gran impacto transformador de la IA",
-            date: "13 Feb 2026"
+            title: "Hollywood crea academias para adaptarse a IA",
+            description: "Curious Refuge entrena trabajadores de cine en IA mientras otros temen perder empleos",
+            date: "15 Feb 2026"
         }
     ];
     
